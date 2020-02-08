@@ -22,7 +22,7 @@ import StudioPlayer from "studio-player";
 import "video.js/dist/video-js.css";
 
 const StudioApp = () => {
-  player = {};
+  const Myplayer = {};
 
   const [state, setstate] = useState({
     video: {
@@ -34,7 +34,7 @@ const StudioApp = () => {
 
   function onPlayerReady(player) {
     console.log("Player is ready: ", player);
-    this.player = player;
+    player = Myplayer;
   }
 
   function onVideoPlay(duration) {
@@ -63,11 +63,11 @@ const StudioApp = () => {
 
   return (
     <div>
-      <StudioPlayer
+      <Player
         controls={true}
         src={state.video.src}
         poster={state.video.poster}
-        width="720"
+        width="650"
         height="420"
         onReady={onPlayerReady}
         onPlay={onVideoPlay}
@@ -85,9 +85,9 @@ export default StudioApp;
 
 ## Ajusting Size
 
-To set the size of the player you can pass width and heigh property. `width="720`
+to set the size of the player you can pass width and heigh property. `width="720"`
 to make the player responsive pass set className to `vjs-fluid` `className="vjs-fluid"`
-you can also pass the ration of video by adding classNames `vjs-16-9`, or `vjs-4-3`
+to change ratio of the video add classNames `vjs-16-9`, or `vjs-4-3`
 
 ## License
 
