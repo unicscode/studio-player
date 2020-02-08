@@ -8,6 +8,10 @@
 npm install --save studio-player
 ```
 
+## Demo
+
+https://aksildoescode.github.io/studio-player/
+
 ## Usage
 
 ```jsx
